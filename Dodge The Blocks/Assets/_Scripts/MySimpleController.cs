@@ -31,9 +31,8 @@ public class MySimpleController : MonoBehaviour
 		}
 		if (Input.GetButtonDown(FireAxis))
 		{
-			GameObject obj = (GameObject)Instantiate(Projectile, transform.position + Vector3.right * 0.3f, Quaternion.identity);
-			Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-			obj.GetComponent<Rigidbody2D>().velocity = new Vector2(ProjectileVelocity, 0f);
+            Debug.Log("Fired Pressed");
+            this.gameObject.GetComponent<PlayerScript>().Fire(Projectile, ProjectileVelocity);
 		}
 	}
 	void OnCollisionEnter2D(Collision2D col)
