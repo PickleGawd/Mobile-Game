@@ -20,10 +20,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public bool collectedCoin = false;
 
-	//Power ups**
-	public bool speedBoost = false;
-
-    public int bulletsToFire = 3;
+	
 
 	public AudioClip hit;
 	public AudioClip spawn;
@@ -51,10 +48,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
     void Update () {
-		if(speedBoost)
-		{
-			Time.timeScale = 1.25f;
-		}
+		
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -113,20 +107,7 @@ public class PlayerScript : MonoBehaviour {
 		SceneManager.LoadScene(0);
 	}
 
-    public void Fire(GameObject Projectile, float ProjectileVelocity = 7f)
-    {
-        for (int i = bulletsToFire; i > 0; i--) 
-        {
-            GameObject obj = (GameObject)Instantiate(Projectile, transform.position + Vector3.right * 0.3f, Quaternion.identity);
-            Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            obj.GetComponent<Rigidbody2D>().velocity = new Vector2(ProjectileVelocity, 0f);
-
-            Debug.Log("We fired!");
-
-            StartCoroutine(Wait(0.01f));
-        }
-
-    }
+	
 
 	void Death()
 	{
@@ -143,9 +124,5 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-    IEnumerator Wait(float time)
-    {
-        yield return new WaitForSeconds(time);
-        Debug.Log("We Waited");
-    }
+   
 }
