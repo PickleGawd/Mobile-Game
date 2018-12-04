@@ -80,6 +80,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			lives = 100;
 			currentBalance = 10000000;
+            PlayerPrefs.SetInt("bullets", 5);
 			//gameObject.tag = "Enemy";
 		}
 	}
