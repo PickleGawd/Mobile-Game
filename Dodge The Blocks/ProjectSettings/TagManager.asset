@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - NextLevel
   - Obstacle
+  - DebugMode
+  - 1up
   layers:
   - Default
   - TransparentFX

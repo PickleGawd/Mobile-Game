@@ -70,6 +70,18 @@ public class PlayerScript : MonoBehaviour {
 			Debug.Log("Contact with Enemy");
 			Death();
 		}
+
+		if (other.transform.tag == "1up")
+		{
+			lives++;
+		}
+
+		if (other.transform.tag == "DebugMode")
+		{
+			lives = 100;
+			currentBalance = 10000000;
+			//gameObject.tag = "Enemy";
+		}
 	}
 
 
@@ -98,7 +110,7 @@ public class PlayerScript : MonoBehaviour {
 		Debug.Log("Game Over");
 
 		PlayerPrefs.SetInt("LevelPref", 1);
-		PlayerPrefs.SetInt("Lives", 3);
+		PlayerPrefs.SetInt("Lives", 100);//Change later
 
 		Time.timeScale = 0.1f;
 		yield return new WaitForSeconds(gameOverClip.length / 10f);

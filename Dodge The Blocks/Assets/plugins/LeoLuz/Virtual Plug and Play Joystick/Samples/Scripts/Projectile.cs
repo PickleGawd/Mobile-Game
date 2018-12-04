@@ -10,12 +10,12 @@ public class Projectile : MonoBehaviour {
 			Destroy(other.gameObject);
 			Destroy(gameObject);
 		}
-		destroyInTwo();
+		destroyIn(1f);
 		
     }
 
-	IEnumerator destroyInTwo() {
-		yield return new WaitForSeconds(2f);
+	IEnumerator destroyIn(float time) {
+		yield return new WaitForSeconds(time);
 		Destroy(gameObject);
 	}
 }
