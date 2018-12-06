@@ -10,6 +10,7 @@ TagManager:
   - Obstacle
   - DebugMode
   - 1up
+  - PlayerPref
   layers:
   - Default
   - TransparentFX

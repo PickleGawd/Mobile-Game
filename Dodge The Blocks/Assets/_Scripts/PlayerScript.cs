@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour {
 	{
 		audioSource = GetComponent<AudioSource>();
 
-		currentBalance = PlayerPrefs.GetInt("currencyPref");
+		currentBalance = PlayerPrefs.GetInt("coins");
 		lives = PlayerPrefs.GetInt("Lives");
 	}
 
@@ -48,6 +48,8 @@ public class PlayerScript : MonoBehaviour {
 	{
 		if (other.transform.tag == "Coin")
 		{
+            Debug.Log("Contact with coin");
+
 			collectedCoin = true; //Touched Coin
 			currentBalance++;
 			SaveTotal();
@@ -93,7 +95,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void SaveTotal()
 	{
-		PlayerPrefs.SetInt("currencyPref", currentBalance);
+		PlayerPrefs.SetInt("coins", currentBalance);
+        Debug.Log("Updated coins");
 	}
 
 	IEnumerator GameOver() //For attemps

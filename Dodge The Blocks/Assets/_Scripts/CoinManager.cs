@@ -13,6 +13,6 @@ public class CoinManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("currentBalence");//change to coins pref
+		gameObject.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("coins");//change to coins pref
 	}
 }

@@ -1447,7 +1447,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1000
+          m_IntArgument: 500
           m_FloatArgument: 0
           m_StringArgument: HI
           m_BoolArgument: 0
@@ -2216,7 +2216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buy for 1000 coins
+  m_Text: Buy for 500 coins
 --- !u!222 &1432831454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2567,7 +2567,7 @@ GameObject:
   - component: {fileID: 1963808745}
   m_Layer: 0
   m_Name: PlayerPrefs
-  m_TagString: Untagged
+  m_TagString: PlayerPref
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2583,6 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd34ad48f388aa40890c673f8636f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneTime: 1
 --- !u!4 &1963808746
 Transform:
   m_ObjectHideFlags: 0
