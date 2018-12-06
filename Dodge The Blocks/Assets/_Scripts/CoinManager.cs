@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour {
 
-	private int currentBalance;
-
 	private void Awake()
 	{
 
@@ -15,8 +13,6 @@ public class CoinManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		currentBalance = PlayerPrefs.GetInt("currencyPref");
-
-		gameObject.GetComponent<Text>().text = "Coins: " + currentBalance;
+		gameObject.GetComponent<Text>().text = "Coins: " + PlayerPrefs.GetInt("currentBalence");//change to coins pref
 	}
 }

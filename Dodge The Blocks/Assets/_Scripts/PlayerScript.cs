@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class PlayerScript : MonoBehaviour {
 
-	public Text attempText;
+	//public Text attempText;
 
 	public int currentBalance;
 	public int currencyInRun;
@@ -19,8 +19,6 @@ public class PlayerScript : MonoBehaviour {
 	public Vector2 startPos;
 
 	public bool collectedCoin = false;
-
-	
 
 	public AudioClip hit;
 	public AudioClip spawn;
@@ -44,11 +42,6 @@ public class PlayerScript : MonoBehaviour {
 
 		audioSource.clip = spawn;
 		audioSource.Play();
-	}
-	
-	// Update is called once per frame
-    void Update () {
-		
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)

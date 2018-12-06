@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MyPlayerPrefs : MonoBehaviour {
 
@@ -18,7 +19,9 @@ public class MyPlayerPrefs : MonoBehaviour {
 		}
 	}
 
-	
+	//public void WritePref(string pref) {
+	//	gameObject.GetComponent<Text>().text = pref + ": " + PlayerPrefs.GetInt(pref);
+	//}
 
 	public static void SetBool(string key, bool state)
 	{
