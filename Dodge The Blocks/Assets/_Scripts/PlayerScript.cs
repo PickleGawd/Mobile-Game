@@ -111,7 +111,7 @@ public class PlayerScript : MonoBehaviour {
 		Debug.Log("Game Over");
 
 		PlayerPrefs.SetInt("LevelPref", 1);
-		PlayerPrefs.SetInt("Lives", 100);//Change later
+		PlayerPrefs.SetInt("Lives", 3);
 
 		Time.timeScale = 0.1f;
 		yield return new WaitForSeconds(gameOverClip.length / 10f);
