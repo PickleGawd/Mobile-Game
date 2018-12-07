@@ -8,11 +8,11 @@ public class MyPlayerPrefs : MonoBehaviour {
 
     GameObject[] Prefs;
 
-    public bool oneTime = true;
+    private bool oneTime = true;
 
 	// Use this for initialization
 	void Awake () {
-        SetPrefs();//Make reset button to call this
+		
 	}
 
 	//public void WritePref(string pref) {
