@@ -11,8 +11,13 @@ public class MyPlayerPrefs : MonoBehaviour {
     private bool oneTime = true;
 
 	// Use this for initialization
-	void Awake () {
-		
+    void Awake () {
+        if (GetBool("oneTime")) {
+            SetPrefs();
+            SetBool("oneTime", false);
+            gameObject.SetActive(false);
+        }
+
 	}
 
 	//public void WritePref(string pref) {
@@ -21,6 +26,7 @@ public class MyPlayerPrefs : MonoBehaviour {
 
     public void SetPrefs() 
     {
+        SetBool("oneTime", true);
         PlayerPrefs.SetInt("bullets", 1);
         PlayerPrefs.SetInt("Lives", 3);
         PlayerPrefs.SetInt("LevelPref", 1);
