@@ -6,17 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MyPlayerPrefs : MonoBehaviour {
 
-    GameObject[] Prefs;
-
     private bool oneTime = true;
 
 	// Use this for initialization
     void Awake () {
-        if (GetBool("oneTime")) {
-            SetPrefs();
-            SetBool("oneTime", false);
-            gameObject.SetActive(false);
-        }
+		if (!PlayerPrefs.HasKey("LevelPref")) {
+			SetPrefs();
+		}
 
 	}
 
@@ -33,7 +29,8 @@ public class MyPlayerPrefs : MonoBehaviour {
         PlayerPrefs.SetInt("coins", 0);
 
         Debug.Log("PlayerPrefs Set");
-        //Debug.Log(oneTime);
+
+		Destroy(gameObject);
     }
 
 	public static void SetBool(string key, bool state)
