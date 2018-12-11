@@ -48,8 +48,7 @@ public class MySimpleController : MonoBehaviour
 		{
             Debug.Log("Fired Pressed");
 			
-			for (int i = bullets; i > 0; i--)
-				Fire(Projectile, 20f);
+			Fire(Projectile, 20f);
 			//StartCoroutine(Wait(1f, hasFired));
 			
 			
@@ -58,14 +57,23 @@ public class MySimpleController : MonoBehaviour
 
 	public void Fire(GameObject Projectile, float ProjectileVelocity = 7f)
 	{
-
-		Vector3 myPos = new Vector3();
-		myPos = new Vector3(Random.Range(transform.position.x + 1f, transform.position.x + 5), Random.Range(transform.position.y + 3f, transform.position.y - 3), 0);
-
-		GameObject obj = (GameObject)Instantiate(Projectile, bullets == 1 ? transform.position + Vector3.right * 0.3f : myPos, Quaternion.identity);
+		GameObject obj = (GameObject)Instantiate(Projectile, transform.position + Vector3.right * 0.3f, Quaternion.identity);
 		Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 		obj.GetComponent<Rigidbody2D>().velocity = new Vector2(ProjectileVelocity, 0f);
-		Debug.Log("We fired!");
+
+		if (bullets > 1) {
+			Vector3 myPos = new Vector3();
+			
+
+			for (int i = bullets - 1; i > 0;  i--) {
+				myPos = new Vector3(Random.Range(transform.position.x + 1f, transform.position.x + 5), Random.Range(transform.position.y + 3f, transform.position.y - 3), 0);
+
+				GameObject projectile = (GameObject)Instantiate(Projectile, myPos, Quaternion.identity);
+				Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+				projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(ProjectileVelocity, 0f);
+			}
+		}
+		Debug.Log("We fired " + bullets);
 	}
 
 	IEnumerator Wait(float time, bool? waited = null)

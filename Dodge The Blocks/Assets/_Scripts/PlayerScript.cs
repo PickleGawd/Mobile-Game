@@ -101,13 +101,15 @@ public class PlayerScript : MonoBehaviour {
 
 	IEnumerator GameOver() //For attemps
 	{
+		Destroy(gameObject.GetComponent<CapsuleCollider2D>());
+
 		audioSource.clip = gameOverClip;
 		audioSource.Play();
 
 		Debug.Log("Game Over");
 
 		PlayerPrefs.SetInt("LevelPref", 1);
-		PlayerPrefs.SetInt("Lives", 3);
+		PlayerPrefs.SetInt("Lives", 3); //Change later?
 
 		Time.timeScale = 0.1f;
 		yield return new WaitForSeconds(gameOverClip.length / 10f);
