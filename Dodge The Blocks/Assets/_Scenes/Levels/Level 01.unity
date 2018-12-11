@@ -446,21 +446,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225365696314681926, guid: f5dbbef98cd654b439ae4595d6526bde,
-        type: 2}
-      propertyPath: m_IgnoreParentGroups
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114127907346332782, guid: f5dbbef98cd654b439ae4595d6526bde,
-        type: 2}
-      propertyPath: ButtonName
-      value: Fire1
-      objectReference: {fileID: 0}
-    - target: {fileID: 225073886166216738, guid: f5dbbef98cd654b439ae4595d6526bde,
-        type: 2}
-      propertyPath: m_IgnoreParentGroups
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5dbbef98cd654b439ae4595d6526bde, type: 2}
   m_IsPrefabAsset: 0
