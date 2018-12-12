@@ -1106,6 +1106,36 @@ Prefab:
       propertyPath: m_Text
       value: Collect Coins to buy upgrades
       objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_text
+      value: Collect coins to buy upgrades in the shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864727898561550, guid: 016dc9c3e05ebd743b20727d586d57ab,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 016dc9c3e05ebd743b20727d586d57ab, type: 2}
   m_IsPrefabAsset: 0
